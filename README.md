@@ -36,9 +36,16 @@ python data/mock-data/validate.py            # expect 42/42 figures match
 
 # Database
 docker compose -f docker-compose.postgres.yml up -d
-```
 
-Backend and frontend commands land with the skeleton (W-001).
+# Backend (port 8008), see backend/README.md
+cd backend && pip install -r requirements.txt
+uvicorn app.main:app --reload --port 8008    # GET /api/health
+pytest && ruff check . && ruff format --check .
+
+# Frontend (port 3008, proxies /api to 8008), see frontend/README.md
+cd frontend && npm ci && npm run dev
+npm run build
+```
 
 ## Layout
 

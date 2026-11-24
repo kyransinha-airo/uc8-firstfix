@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+/* Light grey desk, white cards, a navy brand, one blue pen, verdict colours in the margin. */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+
+  --color-desk: #f4f5f8;
+  --color-paper: #ffffff;
+  --color-ink: #14213d;
+  --color-muted: #5f6b7a;
+  --color-rule: #e3e6ec;
+  --color-navy: #14213d;
+  --color-navy-soft: #1e2d50;
+  --color-pen: #2a4fa8;
+  --color-pen-dark: #1f3d86;
+  --color-pen-soft: #e8eefb;
+
+  /* Verdict tones. Each also has a text label; colour never carries meaning alone. */
+  --color-ok: #2f7d5b;
+  --color-part: #b26a12;
+  --color-bad: #c0352b;
+  --color-unknown: #6b4fa0;
+}
+
+body {
+  @apply bg-desk font-sans text-ink antialiased;
+}
+
+/* Tailwind 4 gives buttons the default arrow; in the base layer so a cursor-* utility still wins. */
+@layer base {
+  button,
+  [role="button"],
+  [role="tab"],
+  select,
+  summary,
+  label[for],
+  label:has(> input[type="checkbox"], > input[type="radio"]),
+  input[type="checkbox"],
+  input[type="radio"],
+  input[type="file"],
+  ::file-selector-button {
+    cursor: pointer;
+  }
+
+  :disabled,
+  [aria-disabled="true"],
+  label:has(> input:disabled) {
+    cursor: not-allowed;
+  }
+}
+
+@utility focus-ring {
+  @apply outline-none focus-visible:ring-2 focus-visible:ring-pen focus-visible:ring-offset-1;
+}
+
+@utility input {
+  @apply rounded-lg border border-rule bg-paper px-3 py-2.5 text-sm text-ink outline-none placeholder:text-muted/70 focus-visible:border-pen focus-visible:ring-2 focus-visible:ring-pen/20;
+}
+
+@utility file {
+  @apply text-sm text-ink file:mr-3 file:rounded-md file:border-0 file:bg-desk file:px-3 file:py-1.5 file:text-sm file:text-ink hover:file:bg-rule;
+}
+
+@utility card {
+  @apply rounded-xl border border-rule bg-paper shadow-[0_1px_2px_rgba(20,33,61,0.04)] print:rounded-none print:border-0 print:shadow-none;
+}
+
+@utility eyebrow {
+  @apply text-[0.7rem] font-semibold uppercase tracking-[0.08em] text-muted;
+}
+
+@utility btn-primary {
+  @apply focus-ring inline-flex items-center justify-center gap-2 rounded-lg bg-pen px-4 py-2 text-sm font-semibold text-white hover:bg-pen-dark disabled:cursor-not-allowed disabled:bg-pen/30;
+}
+
+@utility btn-secondary {
+  @apply focus-ring inline-flex items-center justify-center gap-2 rounded-lg border border-rule bg-paper px-4 py-2 text-sm font-medium text-ink hover:bg-desk disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@utility animate-fade-in {
+  animation: fade-in 200ms ease-out 100ms both;
+}
+
+q {
+  quotes: "\201C" "\201D";
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
