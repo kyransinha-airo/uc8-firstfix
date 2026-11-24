@@ -1,0 +1,33 @@
+# FirstFix demo parameters. BRD 11.1 values unless marked "ours".
+demo:
+  date: "2026-12-01"          # ours, OQ-9
+  run_time: "09:30"           # ours, OQ-9: dispatch run after both reports are in
+  timezone: "America/Chicago" # ours, OQ-7: single site-local zone
+  utc_offset: "-06:00"
+sla:
+  clock_start: earliest_report   # BR-001
+  calendar: elapsed_24x7         # ours, OQ-7
+  default_sla: shorter_candidate # BR-005, OQ-10
+  default_sla_fallback_hours: 4  # ours, OQ-10
+merge_window_min: 60             # BR-002, inclusive
+cause_margin: "0.10"             # BR-008, a difference exactly 0.10 is separable
+depot_detour_max_min: 90         # BR-010, inclusive
+depot_handling_min: 45           # ours, OQ-5: collection time, not counted as detour
+slack_min: 30                    # BR-011, inclusive
+auto_book_score: "0.75"          # BR-011
+repeat_window_days: 30           # BR-014
+verify_window_min: 120           # BR-015
+telemetry_gap_max_min: 15        # BR-015
+scoring:                         # ours, OQ-6
+  scale_min: 240
+  weights: {travel: "0.25", slack: "0.25", parts: "0.25", skill: "0.25"}
+  parts_fit: {full: "1.0", partial: "0.5", none: "0"}
+  skill_margin: {at_required: "0.5", one_or_more_above: "1.0"}
+likelihood:                      # ours, OQ-3: priors in fault_causes.csv, weights here
+  evidence_weights:
+    TELEMETRY_BAND_BREACH: "0.40"
+    OPEN_BULLETIN: "0.30"
+    SERVICE_INTERVAL_OVERDUE: "0.50"
+  counted_status: found          # missing / conflicting / unverified add nothing
+a3_hitl_confidence: high         # ours: escalate unless the agent's confidence is "high"
+agent_step_limit: 12             # ours

@@ -1,0 +1,8 @@
+doc_id,agreement_id,doc_type,label,effective_from,effective_to,assets_mentioned
+AGR-0412,SA-0412,agreement,Service agreement SA-0412,2025-04-01,2027-03-31,
+AGR-0412-SA,SA-0412,schedule,Schedule A,2025-04-01,2027-03-31,CU-1;CU-2
+AGR-0412-SB,SA-0412,schedule,Schedule B,2025-04-01,2027-03-31,
+AGR-0412-SC,SA-0412,schedule,Schedule C,2025-04-01,2027-03-31,
+AGR-0412-AM1,SA-0412,amendment,Amendment 1,2025-11-01,,CU-7
+AGR-0412-AM2,SA-0412,amendment,Amendment 2,2026-06-01,,CU-2
+AGR-0412-AM3,SA-0412,amendment,Amendment 3,2026-12-15,,CU-2

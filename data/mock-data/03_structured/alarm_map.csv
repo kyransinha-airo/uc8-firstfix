@@ -1,0 +1,6 @@
+alarm_code,description,fault_family
+HP-01,High discharge pressure,HIGH_SIDE_PRESSURE
+HP-02,High discharge temperature,HIGH_SIDE_PRESSURE
+LP-01,Low suction pressure,LOW_SIDE_PRESSURE
+FC-03,Condenser fan current out of band,FAN_ELECTRICAL
+DT-05,Cabinet temperature above setpoint,TEMPERATURE_EXCURSION

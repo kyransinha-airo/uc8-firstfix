@@ -1,0 +1,43 @@
+id,phase,figure,expected,rule_basis
+AK-01,1,tickets_after_merge,1,BR-002: same asset CU-2 and fault family within MERGE_WINDOW 60 min (15 min apart)
+AK-02,1,merged_reports,RPT-A7731;RPT-C2290,FR-006: ticket keeps every source report
+AK-03,1,clock_start,2026-12-01T09:10:00-06:00,BR-001: earliest merged report
+AK-04,1,governing_document,AGR-0412-AM2,BR-003: latest amendment in effect at report time that mentions CU-2 (AM3 effective 2026-12-15 is not)
+AK-05,1,schedule,B,Amendment 2 moves CU-2 to schedule B
+AK-06,1,sla_hours,4,Schedule B response time
+AK-07,1,deadline,2026-12-01T13:10:00-06:00,FR-013: clock start + 4 h elapsed (OQ-7)
+AK-08,1,fan_current_breaches_pre,2,Readings below 2.8 A in the 48 h before 09:30
+AK-09,1,coil_clean_months_since,14,JOB-3109 closed 2025-09-30 vs demo date 2026-12-01
+AK-10,1,coil_clean_overdue,true,14 months > 6-month interval
+AK-11,1,likelihood_C1,0.46,SV-07: (prior 0.22 + 0.40 telemetry + 0.30 bulletin) / total 2.00
+AK-12,1,likelihood_C2,0.41,SV-07: (prior 0.32 + 0.50 overdue service) / 2.00
+AK-13,1,likelihood_C3,0.08,SV-07: prior 0.16 / 2.00
+AK-14,1,likelihood_C4,0.05,SV-07: prior 0.10 / 2.00
+AK-15,1,separable,false,BR-008: 0.46 - 0.41 = 0.05 < CAUSE_MARGIN 0.10
+AK-16,1,causes_in_contention,C1;C2,OQ-14: top cause + every cause within CAUSE_MARGIN
+AK-17,1,required_level,2,FR-022: higher of C1 (2) and C2 (2)
+AK-18,1,required_certificate,REFRIG_HANDLING,Skill matrix rows C1 and C2
+AK-19,1,likely_parts,C-35;COIL-CLN;FM-220,Union of likely parts for C1 and C2
+AK-20,1,excluded,T2:CERT_EXPIRED;T3:SKILL_BELOW_REQUIRED,BR-006 T2 certificate expired 2026-11-28; BR-007 T3 level 1 < 2
+AK-21,1,option_count,3,FR-030: T1 direct; T1 via D2; T4 after locked booking (D1 holds no FM-220)
+AK-22,1,opt_T1_direct_arrival,2026-12-01T10:40:00-06:00,09:30 + B1->S14 70 min
+AK-23,1,opt_T1_direct_parts_fit,partial,BR-009: coil cleaner on every van; FM-220 and C-35 not in V1
+AK-24,1,opt_T1_direct_slack,150,13:10 - 10:40
+AK-25,1,opt_T1_direct_score,0.71,travel 0.71 + slack 0.63 + parts 0.50 + skill 1.00; x0.25 each
+AK-26,1,opt_T1_D2_arrival,2026-12-01T12:55:00-06:00,09:30 + B1->D2 100 + D2->S14 60 + handling 45
+AK-27,1,opt_T1_D2_detour,90,(100 + 60) - 70; BR-010 allowed at exactly DEPOT_DETOUR_MAX (OQ-5)
+AK-28,1,opt_T1_D2_parts_fit,full,D2 holds FM-220 and C-35
+AK-29,1,opt_T1_D2_slack,15,13:10 - 12:55
+AK-30,1,opt_T1_D2_score,0.60,travel 0.33 + slack 0.06 + parts 1.00 + skill 1.00; x0.25 each
+AK-31,1,opt_T4_after_arrival,2026-12-01T13:20:00-06:00,BR-012: start 12:30 at S09 + S09->S14 50 min
+AK-32,1,opt_T4_after_parts_fit,full,V4 holds FM-220 and C-35
+AK-33,1,opt_T4_after_slack,-10,13:10 - 13:20: breach by 10 min
+AK-34,1,opt_T4_after_score,0.57,travel 0.79 + slack 0.00 + parts 1.00 + skill 0.50; x0.25 each
+AK-35,1,option_order,T1_direct;T1_D2;T4_after,Score descending
+AK-36,1,auto_book,false,BR-011
+AK-37,1,reason_codes,CAUSES_NOT_SEPARABLE;NO_FULL_FIT_WITH_MIN_SLACK,BR-011: not separable; full-fit options have slack 15 < 30 or breach
+AK-38,2,verify_window,2026-12-01T14:05:00-06:00/2026-12-01T16:05:00-06:00,BR-015: close-out submission + VERIFY_WINDOW 120 min (OQ-15)
+AK-39,2,pressure_in_band_post,true,Discharge pressure 200-325 psig throughout
+AK-40,2,fan_current_breaches_post,2,Two dips below 2.8 A in the window
+AK-41,2,max_gap_post_min,1,No gap > TELEMETRY_GAP_MAX 15 min
+AK-42,2,verdict,not_verified,BR-015: fan current condition fails

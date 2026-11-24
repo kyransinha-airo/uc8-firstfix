@@ -1,0 +1,8 @@
+doc_id,asset_id,schedule,response_hours,statement
+AGR-0412-SA,CU-1,A,8,Schedule A lists CU-1 at an 8-hour response
+AGR-0412-SA,CU-2,A,8,Schedule A lists CU-2 at an 8-hour response
+AGR-0412-SB,,B,4,Schedule B (critical refrigeration) sets a 4-hour response; lists no assets in the original text
+AGR-0412-SC,,C,2,Schedule C (life-safety cold chain) sets a 2-hour response; lists no assets in the original text
+AGR-0412-AM1,CU-7,A,8,Amendment 1 (effective 2025-11-01) adds CU-7 to schedule A
+AGR-0412-AM2,CU-2,B,4,Amendment 2 (effective 2026-06-01) moves CU-2 from schedule A to schedule B
+AGR-0412-AM3,CU-2,C,2,Amendment 3 (effective 2026-12-15) moves CU-2 from schedule B to schedule C; decoy: not in effect on 2026-12-01

@@ -1,0 +1,5 @@
+fault_family,description
+HIGH_SIDE_PRESSURE,Faults raising pressure or temperature on the high side of the refrigeration circuit
+LOW_SIDE_PRESSURE,Faults lowering suction pressure
+FAN_ELECTRICAL,Electrical faults on condenser or evaporator fans
+TEMPERATURE_EXCURSION,Cabinet or room temperature outside setpoint without a circuit alarm

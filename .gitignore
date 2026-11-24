@@ -1,0 +1,39 @@
+# Internal product docs (BRD, one-pager, WBS, standup notes) - local only
+doc-internal/
+*WBS*.xlsx
+
+# Claude Code files - local only
+CLAUDE.md
+**/CLAUDE.md
+CLAUDE.local.md
+.claude/
+
+# Generated local data (folders kept via .gitkeep)
+data/uploads/*
+!data/uploads/.gitkeep
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Node / frontend
+node_modules/
+dist/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.tsbuildinfo

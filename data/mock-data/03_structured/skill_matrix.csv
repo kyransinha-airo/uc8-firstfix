@@ -1,0 +1,5 @@
+fault_family,cause_id,skill,min_level,certificate,basis
+HIGH_SIDE_PRESSURE,C1,REFRIGERATION,2,REFRIG_HANDLING,Diagnosis step PR-114 requires a gauge connection
+HIGH_SIDE_PRESSURE,C2,REFRIGERATION,2,REFRIG_HANDLING,Diagnosis step PR-108 requires a gauge connection
+HIGH_SIDE_PRESSURE,C3,REFRIGERATION,3,REFRIG_HANDLING,Refrigerant recovery
+HIGH_SIDE_PRESSURE,C4,REFRIGERATION,3,REFRIG_HANDLING,Circuit evacuation and recharge

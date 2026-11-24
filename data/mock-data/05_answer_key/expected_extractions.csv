@@ -1,0 +1,3 @@
+report_id,channel,received_at,asset_id,site_id,fault_family,symptom_summary,source_file
+RPT-A7731,telemetry_alarm,2026-12-01T09:10:00-06:00,CU-2,S14,HIGH_SIDE_PRESSURE,HP-01 high discharge pressure 361.2 psig,reports/rpt_a7731.json
+RPT-C2290,call_note,2026-12-01T09:25:00-06:00,CU-2,S14,HIGH_SIDE_PRESSURE,Storage room warming and the unit keeps tripping,reports/rpt_c2290.txt (Prajwal)

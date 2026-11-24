@@ -1,0 +1,8 @@
+{
+  "report_id": "RPT-A7731",
+  "channel": "telemetry_alarm",
+  "received_at": "2026-12-01T09:10:00-06:00",
+  "asset_id": "CU-2",
+  "alarm_code": "HP-01",
+  "reading": {"series_id": "CU2-DP", "value": 361.2, "unit": "psig"}
+}

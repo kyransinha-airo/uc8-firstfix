@@ -1,0 +1,2 @@
+booking_id,tech_id,job_ref,site_id,start,end,locked
+BK-5520,T4,JOB-5520,S09,2026-12-01T10:30:00-06:00,2026-12-01T12:30:00-06:00,true

@@ -1,0 +1,3 @@
+series_id,asset_id,metric,unit,band_low,band_high,interval_sec
+CU2-DP,CU-2,discharge_pressure,psig,200,325,60
+CU2-FC,CU-2,fan_current,A,2.8,3.6,60

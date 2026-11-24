@@ -1,0 +1,5 @@
+model,fault_family,cause_id,cause,prior,procedure_id,safety_critical,likely_parts
+Cryon CX-450,HIGH_SIDE_PRESSURE,C1,Condenser fan motor failing,0.22,PR-114,N,FM-220;C-35
+Cryon CX-450,HIGH_SIDE_PRESSURE,C2,Condenser coil fouled,0.32,PR-108,N,COIL-CLN
+Cryon CX-450,HIGH_SIDE_PRESSURE,C3,Refrigerant overcharge,0.16,PR-121,N,
+Cryon CX-450,HIGH_SIDE_PRESSURE,C4,Non-condensables in circuit,0.10,PR-123,N,FD-16

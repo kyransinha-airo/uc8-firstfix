@@ -1,0 +1,6 @@
+cause_id,evidence_type,status,source,detail
+C1,TELEMETRY_BAND_BREACH,found,CU2-FC,Fan current below 2.8 A twice in the 48 h before the run
+C1,OPEN_BULLETIN,found,BUL-07,SB-07 early capacitor failures on FM-220 for the CX-450
+C2,SERVICE_INTERVAL_OVERDUE,found,JOB-3109,Coil last cleaned 2025-09-30; 14 months against a 6-month interval
+C3,TELEMETRY_BAND_BREACH,missing,CU2-DP,No suction-side evidence of overcharge in the window
+C4,SERVICE_INTERVAL_OVERDUE,missing,JOB-3109,No circuit opening in history

@@ -1,0 +1,5 @@
+tech_id,name,home_base,refrigeration_level,van_id,shift_start,shift_end
+T1,Dana Reyes,B1,3,V1,07:00,17:00
+T2,Marcus Bell,B2,2,V2,07:00,17:00
+T3,Lena Ortiz,B1,1,V3,07:00,17:00
+T4,Sam Adeyemi,B3,2,V4,07:00,17:00

@@ -1,0 +1,4 @@
+job_id,asset_id,opened_at,closed_at,fault_family,work_done,parts_used,technician,notes_doc_id
+JOB-3109,CU-2,2025-09-30T08:15:00-06:00,2025-09-30T11:40:00-06:00,PLANNED_MAINTENANCE,Condenser coil cleaned; filters replaced,COIL-CLN,T1,HIST-3109
+JOB-4410,CU-2,2026-04-17T13:05:00-05:00,2026-04-17T15:20:00-05:00,TEMPERATURE_EXCURSION,Door gasket replaced,,T3,HIST-4410
+JOB-4876,CU-1,2026-08-22T09:00:00-05:00,2026-08-22T10:10:00-05:00,PLANNED_MAINTENANCE,Coil cleaned,COIL-CLN,T4,HIST-4876

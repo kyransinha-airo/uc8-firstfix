@@ -1,0 +1,5 @@
+asset_id,serial_no,model,asset_type,site_id,location_at_site,install_date
+CU-1,CX450-20816,Cryon CX-450,cooling_unit,S14,Dry store,2022-03-14
+CU-2,CX450-20817,Cryon CX-450,cooling_unit,S14,Cold storage room,2022-03-14
+CU-7,CX450-31102,Cryon CX-450,cooling_unit,S09,Dock chiller,2023-06-02
+CU-12,RX300-07741,Cryon RX-300,cooling_unit,S21,Vaccine fridge bank,2024-01-20

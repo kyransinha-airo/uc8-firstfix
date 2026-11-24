@@ -1,0 +1,15 @@
+doc-internal/
+frontend/
+data/uploads
+data/mock-data/05_answer_key
+.git
+.github
+**/.venv
+**/__pycache__
+**/*.py[cod]
+**/.pytest_cache
+**/.ruff_cache
+**/node_modules
+**/dist
+.env
+.env.*
